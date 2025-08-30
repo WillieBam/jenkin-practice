@@ -7,7 +7,7 @@ pipeline {
             }
         }
         stage('Build') {
-            steps { powershell 'gradle build'}
+            steps { powershell '.\gradlew build'}
         }
         stage('Test') {
             steps { bat 'gradlew test'} 
